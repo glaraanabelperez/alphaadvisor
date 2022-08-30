@@ -1,0 +1,469 @@
+*,
+ ::after,
+ ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+body {
+    height: 100%;
+    padding: 1%;
+    background-color: #f9fcfb;
+    margin: 5%;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.boxLogo h1{
+    font-size: 3rem;
+}
+h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 2.3rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+h4{
+    font-size: 1.4rem;
+    font-weight: bold;
+
+}
+
+h5{
+    font-size: 1.3rem;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+.p-10px {
+    padding: 10px;
+}
+
+.iconos{
+    width: 35px;
+    height: 35px;
+    margin: 10% 0% 10% 0%;
+}
+
+/* ANIMACIONES */
+/* ------------------------------------------------------------------------------------  */
+
+#titleMov {
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+.titleMov{
+    display: block!important;
+    padding: 15px;
+    font-size: 34px;
+    color: rgba(0,0,0,.5);
+    z-index: 999;
+    /* transition: all 0.3s ease 0s!important;
+    transform: translateX(0);
+    animation: animacionScrollTo 0.7s ease-out; */
+    opacity: 1!important;
+    position:absolute;
+    top: 415px;
+    left: 350px;
+    text-align: right;
+}
+.titleMov h3{
+    font-size: 28px;
+}
+
+
+#preloader_3{
+    position:relative;
+}
+#preloader_4:before{
+    width:90px;
+    height: 90px;
+    border-radius:70px;
+    background:#f3f4f5;
+    content:'';
+    position: absolute;
+    top: 439px;
+    right: 209px;
+    /* animation: preloader_4_before 1.5s infinite ease-in-out; */
+}
+#preloader_3:before{
+    width:100px;
+    height: 100px;
+    border-radius:70px;
+    background:#2ecc71;
+    content:'';
+    position:absolute;
+    top: 20px;
+    right: 240px;
+    animation: preloader_3_before 1.5s infinite ease-in-out;
+}
+ 
+#preloader_3:after{
+    width:20px;
+    height:20px;
+    top: 90px;
+    right: 130px;
+    border-radius:70px;
+    content:'';
+    position:absolute;
+    background:#86dfd2;
+    animation: preloader_3_after 1.5s infinite ease-in-out;
+    z-index: 999;
+}
+ 
+@keyframes preloader_3_before {
+    0% {transform: translateX(0px) rotate(0deg)}
+    50% {transform: translateX(50px) scale(1.2) rotate(260deg); background:#208dbf;border-radius:50px;}
+      100% {transform: translateX(0px) rotate(0deg)}
+}
+
+@keyframes preloader_3_after {
+    0% {transform: translateX(0px)}
+    50% {transform: translateX(-50px) scale(1.2) rotate(-260deg);background:#208dbf;border-radius:50px;}
+    100% {transform: translateX(0px)}
+}
+/* ------------------------------------------------------------------------------------  */
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.contenedor {
+    padding: 80px;
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.current {
+    border-bottom: 2px solid #209abf;
+}
+
+.boxLogo {
+    display: flex;
+    justify-content: center;
+}
+
+.boxLogo h1>small {
+    color: #209abf;
+}
+
+#subir {
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.irArriba {
+    display: block!important;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 50px;
+    right: 2%;
+    z-index: 999;
+    transition: all 0.3s ease 0s!important;
+    transform: translateX(0);
+    animation: animacionScrollTo 0.7s ease-out;
+    opacity: 1!important;
+}
+
+.irArriba:hover {
+    background: transparent;
+    border: 2px solid #208dbf;
+    transition: all 0.3s ease 0s;
+    color: #208dbf;
+    padding: 15px;
+}
+
+.mover{
+    transition: 0.4s;
+}
+
+@keyframes animacionScrollTo {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+
+/* ESTILOS HEADER */
+
+header {
+    width: 100%;
+    position: relative;
+    padding-top: 25px;
+}
+.img_celular{
+    display: none;
+}
+
+.barra_iconos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #000;
+    overflow: hidden;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+
+ .barra_iconos .icons{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    opacity: 70%;
+    justify-content: center;
+}
+.barra_iconos .icons img{
+    margin-right: 5%;
+}
+.carousel-inner{
+    box-shadow: rgba(0.15, 0, 0, 0.15) 5.95px 5.95px 5.6px;
+    width: 1335px;
+    height: 350px;
+}
+
+.carousel-control-next-icon{
+    background-color: rgb(73, 73, 73);
+    border-radius: 20px;
+    margin: 1%;
+}
+
+
+
+@keyframes animacion1 {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes animacion2 {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+
+/* ESTILOS NAVBAR ----------*/
+
+.navbar {
+    box-shadow: 0 2px 2px -2px #dcdcdc;
+    margin:0px;  
+    background-color: white !important;
+    box-shadow: #000;
+}
+.navbar-nav{
+    box-shadow: #000;
+}
+.bg-light{
+    padding: 0px;
+}
+.navbar-collapse{
+    background-color: white;
+    padding: 0px;
+}
+.nav-item{
+    border: 0.3px solid white;
+    padding: 1%;
+    border-radius: 5px;
+    margin-right: 5%;
+}
+.nav-item a{
+    font-size: 1.4rem;
+    margin:auto;
+    padding-top: 40px;
+}
+.nav-item .imgLogo{
+    width: 300px;
+}
+.navbar-brand {
+    display: none;
+}
+
+.navbar-brand small {
+    color: #20bf6b;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid #208dbf;
+}
+.point{
+ background-color: #208dbf;
+ color: white !important;
+ border-radius: 5px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(0, 0, 0, 1);
+}
+
+.bg-light {
+    background-color:  white!important;
+}
+
+
+/* ESTILOS FEATURES */
+
+.base{
+    padding: 2%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 2%;
+}
+
+.baseSlider{
+    padding: 2%;
+    height: 90vh;
+}
+.features {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 2;
+    overflow: hidden;
+    margin-top: 40px;
+    
+}
+
+.cardEjemplos {
+    background: white !important;
+    width: 30% !important;
+    border-radius: 3px;
+    padding: 2.25rem;
+    transition: 0.4s;
+    margin-bottom: 20px;
+}
+.cardEjemplos:hover {
+    cursor: pointer;
+    transform: scale(0.9, 0.9);
+}
+
+.cardEjemplos p {
+    width: 90%;
+    margin: 0px;
+}
+.cardEjemplos button {
+    border-style: none;
+    background-color: white;
+    margin: 15px 5px 0px 15px;
+    float: right;
+}
+.cardEjemplos_perfil {
+    background: white !important;
+    width: 30% !important;
+    border-radius: 3px;
+    padding: 2.25rem;
+    margin-bottom: 20px;
+}
+
+
+/* MEDIA QUERIES */
+/* ------------------------------------------------------------------------------------  */
+
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+    body {
+        margin: 0%;
+    }
+    .toggle{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-shadow: #000;
+    }
+    .toggle img{
+        width: 200px;
+        margin-left: 50%;
+    }
+    .navbar-nav{
+        margin-bottom: 15%;
+    }
+    .nav-item {
+        background-color: white;
+        border: 0.3px solid white;
+        padding: 1%;
+        border-radius: 5px;
+    }
+    .nav-item .imgLogo{
+        width: 200px;
+        float: right;
+    }
+    .img_celular{
+        display: block;
+        margin-top: 15%;
+    }
+    .img_celular img{
+        width: 100%;
+    }
+    .features {
+        display: block !important;
+        width: 100%;
+        margin: 2;
+        overflow: hidden;
+        margin-top: 40px;
+    }
+
+    .cardEjemplos {
+        background: white !important;
+        width: 100% !important;
+        border-radius: 3px;
+        padding: 0.75rem;
+        transition: 0.4s;
+        margin-bottom: 20px;
+    }
+    #carouselExampleControls{
+        display: none;
+    }
+    .base{
+        display: block;
+    }  
+     .barra_iconos .icons{
+        height: 50px;
+    }
+    .cardEjemplos_perfil{
+        width: 100% !important;
+    }
+    .cardEjemplos button {
+        float: none;
+    }
+
+}
+
