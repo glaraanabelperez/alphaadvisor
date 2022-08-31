@@ -30,10 +30,14 @@ a:hover {
 h1 {
     font-size: 2.4rem;
     font-weight: bold;
+    color: rgba(0,0,0,.5);
+    text-align: left;
 }
 
 h2{
     font-size: 2.3rem;
+    color: rgba(0,0,0,.5);
+    
 }
 
 h3 {
@@ -53,7 +57,7 @@ h5{
 }
 
 p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .p-10px {
@@ -77,7 +81,8 @@ p {
 .titleMov{
     display: block!important;
     padding: 15px;
-    font-size: 34px;
+    font-size: 36px;
+    font-weight: 600;
     color: rgba(0,0,0,.5);
     z-index: 999;
     /* transition: all 0.3s ease 0s!important;
@@ -86,11 +91,11 @@ p {
     opacity: 1!important;
     position:absolute;
     top: 415px;
-    left: 350px;
+    left: 450px;
     text-align: right;
 }
 .titleMov h3{
-    font-size: 28px;
+    font-size: 22px;
 }
 
 
@@ -112,7 +117,7 @@ p {
     width:100px;
     height: 100px;
     border-radius:70px;
-    background:#2ecc71;
+    background:#2ab7f9;
     content:'';
     position:absolute;
     top: 20px;
@@ -131,10 +136,11 @@ p {
     background:#86dfd2;
     animation: preloader_3_after 1.5s infinite ease-in-out;
     z-index: 999;
+   
 }
  
 @keyframes preloader_3_before {
-    0% {transform: translateX(0px) rotate(0deg)}
+    0% {transform: translateX(0px) rotate(0deg);}
     50% {transform: translateX(50px) scale(1.2) rotate(260deg); background:#208dbf;border-radius:50px;}
       100% {transform: translateX(0px) rotate(0deg)}
 }
@@ -335,7 +341,13 @@ header {
     background-color:  white!important;
 }
 
-
+.nosotros_respon{
+    display: none !important;
+}
+.nosotros_desktop{
+    z-index: 999;
+    display: block !important;
+}
 /* ESTILOS FEATURES */
 
 .base{
@@ -364,12 +376,31 @@ header {
 }
 
 .cardEjemplos {
-    background: white !important;
+    background: #d2e5eb !important;
     width: 30% !important;
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 2.25rem;
     transition: 0.4s;
     margin-bottom: 20px;
+}
+.cardEjemplos2 {
+    background: #c7f4f7 !important;
+    width: 30% !important;
+    border-radius: 5px;
+    padding: 2.25rem;
+    transition: 0.4s;
+    margin-bottom: 20px;
+}
+.cardEjemplos3 {
+    background: #adc1c7;
+    width: 30% !important;
+    border-radius: 5px;
+    padding: 2.25rem;
+    transition: 0.4s;
+    margin-bottom: 20px;
+}
+img.cardEjemplos_img {
+    width: 100%;
 }
 .cardEjemplos:hover {
     cursor: pointer;
@@ -389,10 +420,352 @@ header {
 .cardEjemplos_perfil {
     background: white !important;
     width: 30% !important;
-    border-radius: 3px;
-    padding: 2.25rem;
+    border-radius: 10px;
+    padding: 1.25rem;
     margin-bottom: 20px;
 }
+
+/* ESTILOS card mov*/
+
+
+.base_max{
+    width: 80vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Main heading for card's front cover */
+.card-front__heading {
+    font-size: 1.5rem;
+    margin-top: .25rem;
+    text-align: center;
+  }
+  
+  /* Main heading for inside page */
+  .inside-page__heading { 
+    padding-bottom: 1rem; 
+    width: 100%;
+  }
+  
+  /* Mixed */
+  
+  /* For both inside page's main heading and 'view me' text on card front cover */
+  .inside-page__heading,
+  .card-front__text-view {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: .2rem;
+  }
+
+  
+  .inside-page__heading--ski,
+  .card-front__text-view--ski { color: #2aaac1; }
+  
+  .inside-page__heading--beach,
+  .card-front__text-view--beach { color: #279eb2; }
+  
+  .inside-page__heading--camping,
+  .card-front__text-view--camping { color: #00b97c; }
+  
+  /* Front cover */
+  
+  .card-front__tp { color: #fafbfa; }
+  
+  /* For pricing text on card front cover */
+  .card-front__text-price {
+    font-size: 1.2rem;
+    margin-top: -.2rem;
+  }
+  
+  /* Back cover */
+  
+  /* For inside page's body text */
+  .inside-page__text {
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* Icons ===========================================*/
+  
+  .card-front__icon {
+    fill: #fafbfa;
+    font-size: 3vw;
+    height: 5.25rem;
+    margin-top: -.5rem;
+    width: 5.25rem;
+  }
+  
+  /* Buttons =================================================*/
+  
+  .inside-page__btn {
+    background-color: transparent;
+    border: 3px solid;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    overflow: hidden;
+    padding: .7rem .75rem;
+    position: relative;
+    text-decoration: none;
+    transition: all .3s ease;
+    width: 90%;
+    z-index: 10;
+  }
+  
+  .inside-page__btn::before { 
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: scaleY(0);
+    transition: all .3s ease;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .inside-page__btn--city { 
+    border-color: #ff40a1;
+    color: #ff40a1;
+  }
+  
+  .inside-page__btn--city::before { 
+    background-color: #ff40a1;
+  }
+  
+  .inside-page__btn--ski { 
+    border-color: #279eb2;
+    color: #279eb2;
+  }
+  
+  .inside-page__btn--ski::before { 
+    background-color: #279eb2;
+  }
+  
+  .inside-page__btn--beach { 
+    border-color: #fa7f67;
+    color: #fa7f67;
+  }
+  
+  .inside-page__btn--beach::before { 
+    background-color: #fa7f67;
+  }
+  
+  .inside-page__btn--camping { 
+    border-color: #00b97d;
+    color: #00b97d;
+  }
+  
+  .inside-page__btn--camping::before { 
+    background-color: #00b97d;
+  }
+  
+  .inside-page__btn:hover { 
+    color: #fafbfa;
+  }
+  
+  .inside-page__btn:hover::before { 
+    transform: scaleY(1);
+  }
+    
+  
+  /* Container to hold all cards in one place */
+  .card-area {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    justify-content: space-evenly;
+    padding: 1rem;
+  }
+  
+  /* Card ============================================*/
+  
+  /* Area to hold an individual card */
+  .card-section {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /* A container to hold the flip card and the inside page */
+  .card {
+    background-color: rgba(0,0,0, .05);
+    box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
+    height: 15rem;
+    position: relative;
+    transition: all 1s ease;
+    width: 15rem;
+  }
+  
+  /* Flip card - covering both the front and inside front page */
+  
+  /* An outer container to hold the flip card. This excludes the inside page */
+  .flip-card {
+    height: 15rem;
+    perspective: 100rem;
+    position: absolute;
+    right: 0;
+    transition: all 1s ease;
+    visibility: hidden;
+    width: 15rem;
+    z-index: 100;
+  }
+  
+  /* The outer container's visibility is set to hidden. This is to make everything within the container NOT set to hidden  */
+  /* This is done so content in the inside page can be selected */
+  .flip-card > * {
+    visibility: visible;
+  }
+  
+  /* An inner container to hold the flip card. This excludes the inside page */
+  .flip-card__container {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+    width: 100%;
+  }
+  
+  .card-front,
+  .card-back {
+    backface-visibility: hidden;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Styling for the front side of the flip card */
+  
+  /* container for the front side */
+  .card-front {
+    background-color: #fafbfa;
+    height: 15rem;
+    width: 15rem;
+  }
+  
+  /* Front side's top section */
+  .card-front__tp {
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
+    display: flex;
+    flex-direction: column;
+    height: 12rem;
+    justify-content: center;
+    padding: .75rem;
+  }
+  
+  .card-front__tp--city {
+    background: linear-gradient(
+      to bottom,
+      #ff73b9,
+      #ff40a1
+    );
+  }
+  
+  .card-front__tp--ski {
+    background: linear-gradient(
+      to bottom,
+      #47acd7,
+      #2778b2
+    );
+  }
+  
+  .card-front__tp--beach {
+    background: linear-gradient(
+      to bottom,
+      #47c2d7,
+      #279eb2
+      
+    );
+  }
+  
+  .card-front__tp--camping {
+    background: linear-gradient(
+      to bottom,
+      #47c2d7,
+      #27b2b2
+    );
+  }
+  
+  /* Front card's bottom section */
+  .card-front__bt {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Styling for the back side of the flip card */
+  
+  .card-back {
+    background-color: #fafbfa;
+    transform: rotateY(180deg);
+  }
+  
+  /* Specifically targeting the <video> element */
+  .video__container {
+    clip-path: polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%);
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  /* Inside page */
+  
+  .inside-page {
+    background-color: #fafbfa;
+    box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0,0,0,0.25);
+    height: 100%;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    transition: all 1s ease;
+    width: 15rem;
+    z-index: 1;
+  }
+  
+  .inside-page__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center; 
+    width: 100%;
+  }
+  
+  /* Functionality ====================================*/
+  
+  /* This is to keep the card centered (within its container) when opened */
+  .card:hover {
+    box-shadow:
+    -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.75);
+    width: 30rem;
+  }
+  
+  /* When the card is hovered, the flip card container will rotate */
+  .card:hover .flip-card__container {
+    transform: rotateY(-180deg);
+  }
+  
+  /* When the card is hovered, the shadow on the inside page will shrink to the left */
+  .card:hover .inside-page {
+    box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0,0,0,0.1);
+  }
+
+  
+
+
+/* ESTILOS card mov */
 
 
 /* MEDIA QUERIES */
@@ -442,13 +815,22 @@ header {
     }
 
     .cardEjemplos {
-        background: white !important;
         width: 100% !important;
         border-radius: 3px;
         padding: 0.75rem;
         transition: 0.4s;
         margin-bottom: 20px;
     }
+    .card_min {
+        background: white !important;
+        width: 20% !important;
+        height: 20%;
+        border-radius: 3px;
+        padding: 0.75rem;
+        margin-bottom: 20px;
+    }
+ 
+
     #carouselExampleControls{
         display: none;
     }
@@ -463,6 +845,18 @@ header {
     }
     .cardEjemplos button {
         float: none;
+    }
+    .animation_1{
+        display:none;
+    }
+    .baseSlider{
+        display: none;
+    }
+    .nosotros_respon{
+        display: block !important;
+    }
+    .nosotros_desktop{
+        display: none !important;
     }
 
 }
